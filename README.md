@@ -5,7 +5,7 @@
 
 ## 実行方法
 ```
-				python run.py
+python run.py
 ```
 とコマンドを打ってください.
 
