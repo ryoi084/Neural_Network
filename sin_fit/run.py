@@ -42,8 +42,9 @@ for z in np.linspace(0.0, 2.0*np.pi, 100):
     
 Y = Y[np.argsort(X)]
 X = np.sort(X)
+plt.title("Epoch = %d" %epochs)
 plt.plot(X, Y, label='training_data', linestyle='dashed')
 plt.plot(x, sin, label='Neural_Network')
 plt.legend()
-plt.show()
-plt.savefig('result.png')
+plt.savefig('result_epoch=%d.png'%epochs)
+# plt.show()
