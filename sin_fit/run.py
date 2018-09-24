@@ -37,11 +37,6 @@ Y_plot = Y[np.argsort(X)]
 X_plot = np.sort(X)
 
 for epochs in range(50):
-    '''
-    net.SGD(training_data, epochs, mini_batch_size, eta, 
-            lmbda = 5.0,
-            )
-    '''
     net.SGD(training_data, 1, mini_batch_size, eta, 
             lmbda = 5.0,
             )
@@ -52,11 +47,10 @@ for epochs in range(50):
         x.append(z)
         sin.append((net.feedforward(np.array([[z]]))[0]))
         
-    plt.title("Epoch = %d" %epochs)
+    plt.title("Epoch = %d" %(epochs+1))
     plt.plot(X_plot, Y_plot, label='training_data', linestyle='dashed')
     plt.plot(x, sin, label='Neural_Network')
-    plt.savefig('./png/result_epoch=%03d.png'%epochs)
+    plt.savefig('./png/result_epoch=%03d.png'%(epochs+1))
     plt.close()
-    # plt.show()
 
 
