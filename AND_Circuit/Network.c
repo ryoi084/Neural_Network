@@ -34,7 +34,7 @@ void main(void){
 				double test_X[4][2] = {{0.,0.},{0.,1.},{1.,0.},{1.,1.}};
 				double test_Y[4][1] = {{0.},{0.},{0.},{1.}};
 				// 重みWとバイアスbを生成
-				double W[1][2] = {{(double)rand()/(2.*RAND_MAX),(double)rand()/(2.*RAND_MAX)}};
+				double W[1][2] = {{(double)rand()/RAND_MAX,(double)rand()/RAND_MAX}};
 				double b[1] = {0.0};
 				double out[2];
 				double cost;
